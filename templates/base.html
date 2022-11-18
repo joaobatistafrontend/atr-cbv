@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{%block title%} {%endblock%}</title>
+
+</head>
+<body>
+    <h1>Meu Site</h1>
+    <button onclick="location.href='{% url 'home' %}'">Home</button>
+    {%if user.is_authenticated%}
+        <button onclick="location.href='{% url 'logout' %}'">Sair</button>
+        <button onclick="location.href='{% url 'password_change' %}'">Redefinir Senha</button>
+        <button onclick="location.href='{% url 'test' %}'">test</button>
+    {%else%}
+        <button onclick="location.href='{% url 'login' %}'">Entra</button>
+        <button onclick="location.href='{% url 'singup' %}'">Cadastra de Usuario</button>
+    {%endif%}
+    {%block content%} 
+    {%endblock%}
+</body>
+</html>

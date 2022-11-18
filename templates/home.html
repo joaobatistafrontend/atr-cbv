@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{%block content%} 
+    <h2>Home</h2> 
+    <h5>{%if user.is_authenticated%} Está logado o usuario: <strong>{{user.username}}</strong>{%endif%}</h5>
+    
+
+    <p>Senja bem vindo</p>
+
+{%endblock%}

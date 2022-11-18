@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{%block content%} 
+    <h2>Entre com os dados</h2>
+    <form action="" method="post">{%csrf_token%}
+        {{form.as_p}}
+        <button type="submit">Entra</button><br><br>
+        <a href="{% url 'password_reset'%}">Esqueceu sua senha?</a>
+
+    </form>
+
+{%endblock%}
