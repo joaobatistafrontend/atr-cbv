@@ -11,7 +11,8 @@
     {%if user.is_authenticated%}
         <button onclick="location.href='{% url 'logout' %}'">Sair</button>
         <button onclick="location.href='{% url 'password_change' %}'">Redefinir Senha</button>
-        <button onclick="location.href='{% url 'test' %}'">test</button>
+        <button onclick="location.href='{% url 'creat' %}'">Criar Produto</button>
+        <button onclick="location.href='{% url 'list' %}'">Listagem</button>
     {%else%}
         <button onclick="location.href='{% url 'login' %}'">Entra</button>
         <button onclick="location.href='{% url 'singup' %}'">Cadastra de Usuario</button>

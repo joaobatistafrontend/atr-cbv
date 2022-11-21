@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{%block content%} 
+    <h2>Listagem</h2>    
+    <table class="">
+        <thead class="">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Produto</th>
+                <th scope="col">Preco</th>
+                <th scope="col">estoque</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody >
+            {%for pro in produtos %}
+            <tr>
+                <th scope="row"></th>
+                <td>{{ pro.nome }}</td>
+                <td>{{ pro.preco }}</td>
+                <td>{{ pro.estoque }}</td>
+                <td><button type="button" class="btn btn-warning" onclick="location.href = '{% url 'update' pro.pk  %}'" >Editar</button></td>
+                <td><button type="button" class="btn btn-danger" onclick="location.href = '{% url 'deleta' pro.pk %}'" >Excluir</button></td>
+            </tr>
+            {%endfor%}
+
+        </tbody>
+        
+      </table>
+{%endblock%}
